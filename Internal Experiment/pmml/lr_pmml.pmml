@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_4" version="4.4">
+    <Header copyright="Copyright (c) 2018 Software AG" description="Default Description">
+        <Application name="Nyoka" version="4.1.0"/>
+        <Timestamp>2020-02-12 20:23:39.373758</Timestamp>
+    </Header>
+    <DataDictionary numberOfFields="35">
+        <DataField name="sensor_00" optype="continuous" dataType="double"/>
+        <DataField name="sensor_01" optype="continuous" dataType="double"/>
+        <DataField name="sensor_02" optype="continuous" dataType="double"/>
+        <DataField name="sensor_03" optype="continuous" dataType="double"/>
+        <DataField name="sensor_05" optype="continuous" dataType="double"/>
+        <DataField name="sensor_06" optype="continuous" dataType="double"/>
+        <DataField name="sensor_07" optype="continuous" dataType="double"/>
+        <DataField name="sensor_11" optype="continuous" dataType="double"/>
+        <DataField name="sensor_12" optype="continuous" dataType="double"/>
+        <DataField name="sensor_13" optype="continuous" dataType="double"/>
+        <DataField name="sensor_14" optype="continuous" dataType="double"/>
+        <DataField name="sensor_27" optype="continuous" dataType="double"/>
+        <DataField name="sensor_28" optype="continuous" dataType="double"/>
+        <DataField name="sensor_29" optype="continuous" dataType="double"/>
+        <DataField name="sensor_30" optype="continuous" dataType="double"/>
+        <DataField name="sensor_31" optype="continuous" dataType="double"/>
+        <DataField name="sensor_34" optype="continuous" dataType="double"/>
+        <DataField name="sensor_35" optype="continuous" dataType="double"/>
+        <DataField name="sensor_36" optype="continuous" dataType="double"/>
+        <DataField name="sensor_37" optype="continuous" dataType="double"/>
+        <DataField name="sensor_38" optype="continuous" dataType="double"/>
+        <DataField name="sensor_39" optype="continuous" dataType="double"/>
+        <DataField name="sensor_40" optype="continuous" dataType="double"/>
+        <DataField name="sensor_41" optype="continuous" dataType="double"/>
+        <DataField name="sensor_42" optype="continuous" dataType="double"/>
+        <DataField name="sensor_43" optype="continuous" dataType="double"/>
+        <DataField name="sensor_44" optype="continuous" dataType="double"/>
+        <DataField name="sensor_45" optype="continuous" dataType="double"/>
+        <DataField name="sensor_46" optype="continuous" dataType="double"/>
+        <DataField name="sensor_47" optype="continuous" dataType="double"/>
+        <DataField name="sensor_48" optype="continuous" dataType="double"/>
+        <DataField name="sensor_49" optype="continuous" dataType="double"/>
+        <DataField name="sensor_50" optype="continuous" dataType="double"/>
+        <DataField name="sensor_51" optype="continuous" dataType="double"/>
+        <DataField name="machine_status" optype="categorical" dataType="integer">
+            <Value value="0"/>
+            <Value value="1"/>
+        </DataField>
+    </DataDictionary>
+    <TransformationDictionary>
+        <DerivedField name="standardScaler(sensor_00)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_00"/>
+                    <Constant dataType="double">2.4075432714374765</Constant>
+                </Apply>
+                <Constant dataType="double">0.2644986199508013</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_01)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_01"/>
+                    <Constant dataType="double">48.1454131422355118</Constant>
+                </Apply>
+                <Constant dataType="double">1.9982173377434000</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_02)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_02"/>
+                    <Constant dataType="double">51.8371639506114192</Constant>
+                </Apply>
+                <Constant dataType="double">2.1479843434803079</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_03)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_03"/>
+                    <Constant dataType="double">43.7434370895490119</Constant>
+                </Apply>
+                <Constant dataType="double">1.8254733515222383</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_05)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_05"/>
+                    <Constant dataType="double">76.9406750048531904</Constant>
+                </Apply>
+                <Constant dataType="double">8.9929630530979772</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_06)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_06"/>
+                    <Constant dataType="double">13.4165157079663029</Constant>
+                </Apply>
+                <Constant dataType="double">0.7349789016620801</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_07)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_07"/>
+                    <Constant dataType="double">15.9891002708661958</Constant>
+                </Apply>
+                <Constant dataType="double">0.6333559381333742</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_11)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_11"/>
+                    <Constant dataType="double">42.0708444751526471</Constant>
+                </Apply>
+                <Constant dataType="double">7.2317558007286689</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_12)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_12"/>
+                    <Constant dataType="double">29.6014393876944766</Constant>
+                </Apply>
+                <Constant dataType="double">7.3479574055238954</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_13)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_13"/>
+                    <Constant dataType="double">3.6053351753924154</Constant>
+                </Apply>
+                <Constant dataType="double">4.3662180474400669</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_14)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_14"/>
+                    <Constant dataType="double">348.7159373781342993</Constant>
+                </Apply>
+                <Constant dataType="double">139.9450659417817349</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_27)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_27"/>
+                    <Constant dataType="double">462.1605185622630074</Constant>
+                </Apply>
+                <Constant dataType="double">149.0769914228441166</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_28)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_28"/>
+                    <Constant dataType="double">839.0043315853635022</Constant>
+                </Apply>
+                <Constant dataType="double">371.6967525158019612</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_29)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_29"/>
+                    <Constant dataType="double">610.6258892929146214</Constant>
+                </Apply>
+                <Constant dataType="double">289.4650714883397882</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_30)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_30"/>
+                    <Constant dataType="double">550.7445621377054294</Constant>
+                </Apply>
+                <Constant dataType="double">231.2796980831780047</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_31)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_31"/>
+                    <Constant dataType="double">812.7301935005289124</Constant>
+                </Apply>
+                <Constant dataType="double">346.5506045174752217</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_34)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_34"/>
+                    <Constant dataType="double">196.1466768932181708</Constant>
+                </Apply>
+                <Constant dataType="double">83.6339462050159455</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_35)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_35"/>
+                    <Constant dataType="double">349.5062741760078779</Constant>
+                </Apply>
+                <Constant dataType="double">137.9272807103823766</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_36)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_36"/>
+                    <Constant dataType="double">452.4987853775868416</Constant>
+                </Apply>
+                <Constant dataType="double">299.0682680120953592</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_37)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_37"/>
+                    <Constant dataType="double">84.3825335913768981</Constant>
+                </Apply>
+                <Constant dataType="double">26.3304875372132123</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_38)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_38"/>
+                    <Constant dataType="double">50.6272139030100021</Constant>
+                </Apply>
+                <Constant dataType="double">8.4896146858205839</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_39)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_39"/>
+                    <Constant dataType="double">37.3953383349378470</Constant>
+                </Apply>
+                <Constant dataType="double">11.3224380653347296</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_40)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_40"/>
+                    <Constant dataType="double">66.2269793721506801</Constant>
+                </Apply>
+                <Constant dataType="double">16.3975497164186450</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_41)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_41"/>
+                    <Constant dataType="double">36.2615374598310822</Constant>
+                </Apply>
+                <Constant dataType="double">6.0313050089684932</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_42)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_42"/>
+                    <Constant dataType="double">36.0656941508835018</Constant>
+                </Apply>
+                <Constant dataType="double">7.5905898371794374</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_43)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_43"/>
+                    <Constant dataType="double">43.6119234898180395</Constant>
+                </Apply>
+                <Constant dataType="double">8.2903656442699507</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_44)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_44"/>
+                    <Constant dataType="double">40.7637284693124826</Constant>
+                </Apply>
+                <Constant dataType="double">6.9163351241796391</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_45)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_45"/>
+                    <Constant dataType="double">42.2774165896316632</Constant>
+                </Apply>
+                <Constant dataType="double">9.8924490945100878</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_46)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_46"/>
+                    <Constant dataType="double">45.7161329935583041</Constant>
+                </Apply>
+                <Constant dataType="double">11.9143267110607720</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_47)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_47"/>
+                    <Constant dataType="double">43.7088832296401506</Constant>
+                </Apply>
+                <Constant dataType="double">8.0682670262946150</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_48)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_48"/>
+                    <Constant dataType="double">121.5073627876800373</Constant>
+                </Apply>
+                <Constant dataType="double">55.4026249178853973</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_49)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_49"/>
+                    <Constant dataType="double">54.0787924803655855</Constant>
+                </Apply>
+                <Constant dataType="double">11.7110590200929607</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_50)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_50"/>
+                    <Constant dataType="double">201.5692650738607483</Constant>
+                </Apply>
+                <Constant dataType="double">45.1716958732536114</Constant>
+            </Apply>
+        </DerivedField>
+        <DerivedField name="standardScaler(sensor_51)" optype="continuous" dataType="double">
+            <Apply function="/">
+                <Apply function="-">
+                    <FieldRef field="sensor_51"/>
+                    <Constant dataType="double">199.8334236142977147</Constant>
+                </Apply>
+                <Constant dataType="double">73.8023935789626364</Constant>
+            </Apply>
+        </DerivedField>
+    </TransformationDictionary>
+    <RegressionModel modelName="LogisticRegressionCV" functionName="classification" normalizationMethod="logit">
+        <MiningSchema>
+            <MiningField name="sensor_00" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_01" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_02" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_03" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_05" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_06" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_07" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_11" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_12" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_13" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_14" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_27" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_28" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_29" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_30" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_31" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_34" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_35" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_36" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_37" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_38" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_39" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_40" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_41" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_42" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_43" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_44" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_45" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_46" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_47" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_48" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_49" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_50" usageType="active" optype="continuous"/>
+            <MiningField name="sensor_51" usageType="active" optype="continuous"/>
+            <MiningField name="machine_status" usageType="target" optype="categorical"/>
+        </MiningSchema>
+        <Output>
+            <OutputField name="probability_0" optype="continuous" dataType="double" feature="probability" value="0"/>
+            <OutputField name="probability_1" optype="continuous" dataType="double" feature="probability" value="1"/>
+            <OutputField name="predicted_machine_status" optype="categorical" dataType="integer" feature="predictedValue"/>
+        </Output>
+        <RegressionTable intercept="7.7323153914263223" targetCategory="1">
+            <NumericPredictor name="standardScaler(sensor_00)" exponent="1" coefficient="0.0014669694713227"/>
+            <NumericPredictor name="standardScaler(sensor_01)" exponent="1" coefficient="0.0005125915954303"/>
+            <NumericPredictor name="standardScaler(sensor_02)" exponent="1" coefficient="0.0001067061963669"/>
+            <NumericPredictor name="standardScaler(sensor_03)" exponent="1" coefficient="0.0001030867547783"/>
+            <NumericPredictor name="standardScaler(sensor_05)" exponent="1" coefficient="0.0012357069678237"/>
+            <NumericPredictor name="standardScaler(sensor_06)" exponent="1" coefficient="0.0018394551697156"/>
+            <NumericPredictor name="standardScaler(sensor_07)" exponent="1" coefficient="0.0025439596608280"/>
+            <NumericPredictor name="standardScaler(sensor_11)" exponent="1" coefficient="0.0003312819979624"/>
+            <NumericPredictor name="standardScaler(sensor_12)" exponent="1" coefficient="0.0002772112424504"/>
+            <NumericPredictor name="standardScaler(sensor_13)" exponent="1" coefficient="-0.0003425803628805"/>
+            <NumericPredictor name="standardScaler(sensor_14)" exponent="1" coefficient="-0.0001983160050427"/>
+            <NumericPredictor name="standardScaler(sensor_27)" exponent="1" coefficient="-0.0001245413401427"/>
+            <NumericPredictor name="standardScaler(sensor_28)" exponent="1" coefficient="-0.0002587650764461"/>
+            <NumericPredictor name="standardScaler(sensor_29)" exponent="1" coefficient="-0.0001292966003681"/>
+            <NumericPredictor name="standardScaler(sensor_30)" exponent="1" coefficient="-0.0002052173533478"/>
+            <NumericPredictor name="standardScaler(sensor_31)" exponent="1" coefficient="-0.0002232334177477"/>
+            <NumericPredictor name="standardScaler(sensor_34)" exponent="1" coefficient="-0.0000228585554403"/>
+            <NumericPredictor name="standardScaler(sensor_35)" exponent="1" coefficient="-0.0002033914464373"/>
+            <NumericPredictor name="standardScaler(sensor_36)" exponent="1" coefficient="0.0000827870533861"/>
+            <NumericPredictor name="standardScaler(sensor_37)" exponent="1" coefficient="0.0003327819186049"/>
+            <NumericPredictor name="standardScaler(sensor_38)" exponent="1" coefficient="-0.0036553678255369"/>
+            <NumericPredictor name="standardScaler(sensor_39)" exponent="1" coefficient="-0.0031462694024524"/>
+            <NumericPredictor name="standardScaler(sensor_40)" exponent="1" coefficient="-0.0020481336081105"/>
+            <NumericPredictor name="standardScaler(sensor_41)" exponent="1" coefficient="-0.0026787343113984"/>
+            <NumericPredictor name="standardScaler(sensor_42)" exponent="1" coefficient="-0.0016257506430191"/>
+            <NumericPredictor name="standardScaler(sensor_43)" exponent="1" coefficient="-0.0017231162571406"/>
+            <NumericPredictor name="standardScaler(sensor_44)" exponent="1" coefficient="-0.0001215535353112"/>
+            <NumericPredictor name="standardScaler(sensor_45)" exponent="1" coefficient="0.0000728169378912"/>
+            <NumericPredictor name="standardScaler(sensor_46)" exponent="1" coefficient="-0.0004638981374565"/>
+            <NumericPredictor name="standardScaler(sensor_47)" exponent="1" coefficient="-0.0012321726559260"/>
+            <NumericPredictor name="standardScaler(sensor_48)" exponent="1" coefficient="0.0000400957561141"/>
+            <NumericPredictor name="standardScaler(sensor_49)" exponent="1" coefficient="0.0000996048085327"/>
+            <NumericPredictor name="standardScaler(sensor_50)" exponent="1" coefficient="-0.0000827984191014"/>
+            <NumericPredictor name="standardScaler(sensor_51)" exponent="1" coefficient="-0.0001216280916066"/>
+        </RegressionTable>
+        <RegressionTable intercept="0.0" targetCategory="0"/>
+    </RegressionModel>
+</PMML>
